@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if ! command -v git; then
-    echo "[fail] : no git"
+    echo "[fail] : git"
     exit 1
 fi
 

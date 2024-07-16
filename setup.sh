@@ -1,16 +1,13 @@
 #!/bin/sh
 
-if ! command -v git; then
-    echo "[fail] : git"
-    exit 1
-fi
+pacman -S --needed --noconfirm git
 
 git submodule update --init
 
 git submodule foreach "
     if [ -f setup.sh ]; then
-        sh setup.sh
+        sudo sh setup.sh
     fi
-"
+" # todo: rm sudo?
 
 echo "[success]"

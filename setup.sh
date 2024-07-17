@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# pacman
+pacamn -Syu
+
 # openssh
 pacman -S --needed --noconfirm openssh
 if ! systemctl is-enabled --quiet sshd; then

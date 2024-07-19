@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # pacman
-pacamn -Syu
+pacman -Syu
 
 # openssh
 pacman -S --needed --noconfirm openssh
@@ -17,8 +17,9 @@ pacman -S --needed --noconfirm git
 git submodule update --init
 git submodule foreach "
     if [ -f setup.sh ]; then
-        sudo sh setup.sh
+        sh setup.sh
     fi
-" # todo: rm sudo?
+"
 
-echo "[success]"
+echo "[.dotfiles] : success"
+

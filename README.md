@@ -1,5 +1,5 @@
 # .dotfiles
 
 ```sh
-chmod +x script.sh && sudo ./script.sh
+chmod +x setup.sh && sudo ./setup.sh
 ```

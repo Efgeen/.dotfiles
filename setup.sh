@@ -17,9 +17,11 @@ pacman -S --needed --noconfirm git
 git submodule update --init
 git submodule foreach "
     if [ -f setup.sh ]; then
-        sh setup.sh
+        if [ ! -x setup.sh ]; then
+            chmod +x setup.sh
+        fi
+        ./setup.sh
     fi
 "
 
 echo "[.dotfiles] : success"
-

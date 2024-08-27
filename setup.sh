@@ -1,9 +1,12 @@
 #!/bin/sh
 
+# pacman
 pacman -Syu
 
-# ssh
+# openssh
 pacman -S --noconfirm openssh
+
+# ssh
 if ! systemctl is-enabled sshd; then
     systemctl enable sshd
 fi
@@ -23,4 +26,8 @@ git submodule foreach '
     fi
     cd -
 '
+
+# github
+pacman -S --noconfirm github-cli
+echo "gh auth login -p https -h github.com -w"
 

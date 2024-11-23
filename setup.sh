@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo -e "\033[0;32m[.dotfiles]\033[0m"
+echo -e "\033[0;32m[.dotfiles] : setup...\033[0m"
 
 # syu
 pacman -Syu --noconfirm --needed
@@ -20,9 +20,7 @@ git submodule update --init
 git submodule foreach '
     if [ -f setup.sh ]; then
         sh setup.sh
-    else
-        echo "did not find file "setup.sh" in $(pwd)"
     fi
 '
 
-echo -e "\033[0;32m[!.dotfiles]\033[0m"
+echo -e "\033[0;32m[.dotfiles] : success\033[0m"

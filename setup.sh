@@ -21,6 +21,8 @@ git submodule foreach '
     cd $sm_path
     if [ -f setup.sh ]; then
         sh setup.sh
+    else
+        echo "did not find file "setup.sh" in $(pwd)"
     fi
     cd -
 '

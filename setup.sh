@@ -22,6 +22,8 @@ git submodule foreach '
         cd "$sm_path"
         sh setup.sh
         cd -
+    else
+        echo "nop"
     fi
 '
 

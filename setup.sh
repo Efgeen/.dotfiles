@@ -18,13 +18,11 @@ fi
 pacman -S --noconfirm --needed git
 git submodule update --init
 git submodule foreach '
-    cd $sm_path
     if [ -f setup.sh ]; then
         sh setup.sh
     else
         echo "did not find file "setup.sh" in $(pwd)"
     fi
-    cd -
 '
 
 echo -e "\033[0;32m[!.dotfiles]\033[0m"

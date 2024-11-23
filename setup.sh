@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo [.dotfiles]
+echo \033[0;32m[.dotfiles]\033[0m
 
 # syu
 pacman -Syu --noconfirm --needed

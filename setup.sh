@@ -18,13 +18,10 @@ fi
 pacman -S --noconfirm --needed git
 git submodule update --init
 git submodule foreach '
-    echo "${sm_path}"
-    if [ -f "$sm_path/setup.sh" ]; then
+    if [ -f "${sm_path}/setup.sh" ]; then
         cd "$sm_path"
         sh setup.sh
         cd -
-    else
-        echo "nop"
     fi
 '
 

@@ -25,4 +25,4 @@ git submodule foreach '
     fi
 '
 
-echo [!.dotfiles]
+echo \033[0;32m[!.dotfiles]\033[0m

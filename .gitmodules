@@ -1,0 +1,4 @@
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/efgeen/.nvim.git
+	branch = master

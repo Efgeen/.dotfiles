@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo -e \033[0;32m[.dotfiles]\033[0m
+echo -e "\033[0;32m[.dotfiles]\033[0m"
 
 # syu
 pacman -Syu --noconfirm --needed
@@ -25,4 +25,4 @@ git submodule foreach '
     fi
 '
 
-echo -e \033[0;32m[!.dotfiles]\033[0m
+echo -e "\033[0;32m[!.dotfiles]\033[0m"

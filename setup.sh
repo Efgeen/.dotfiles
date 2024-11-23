@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # syu
-pacman -Syu
+pacman -Syu --noconfirm
 
 # ssh
 pacman -S --noconfirm openssh

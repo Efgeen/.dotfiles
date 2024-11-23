@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo [.dotfiles]
+
 # syu
 pacman -Syu --noconfirm --needed
 
@@ -22,3 +24,5 @@ git submodule foreach '
         cd -
     fi
 '
+
+echo [!.dotfiles]

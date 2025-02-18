@@ -6,3 +6,7 @@
 	path = tmux
 	url = https://github.com/efgeen/.tmux.git
 	branch = master
+[submodule "sshd"]
+	path = sshd
+	url = https://github.com/efgeen/.sshd.git
+	branch = master
